@@ -1,28 +1,58 @@
 .container {
-  border: 1px solid red;
-  background-color: whitesmoke;
+  // border: 1px solid red;
   width: 50vw;
   height: 100vh;
   padding: 10%;
 
   .outer-layer {
-    border: 1px solid red;
+    // border: 1px solid red;
     height: 100%;
     padding: 3%;
   }
 
   .inner-layer {
+    background-color: white;
+    box-shadow: 3px 3px 5px 6px rgb(204, 204, 204);
     height: 100%;
-    border: 1px solid red;
+    // border: 1px solid red;
 
     .top-half {
-      height: 50%;
-      border: 1px solid red;
+      background-image: url("https://genesisprofessionalgroup-my.sharepoint.com/personal/lcaro_genesisprofessionalgroup_com/Documents/Microsoft%20Teams%20Chat%20Files/image-2020-03-27-15-07-05-713.jpg");
+      background-size: cover;
+      height: 60%;
+      // border: 1px solid red;
     }
 
     .bottom-half {
-      height: 50%;
-      border: 1px solid red;
+      position: relative;
+      height: 40%;
+      // border: 1px solid red;
+
+      p {
+        padding: 10% 5%;
+        font-size: 1.5rem;
+        color: gray;
+      }
+
+      .browse-tab {
+        display: flex;
+        position: absolute;
+        margin-right: -11px;
+        border: 1px solid rgb(3, 151, 127);
+        background-color: rgb(3, 151, 127);
+        box-shadow: -3px 0px 10px 0px rgb(204, 204, 204);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 35%;
+        height: 17%;
+        bottom: 55px;
+        right: 10px;
+        color: white;
+
+        h2 {
+          align-self: center;
+        }
+      }
     }
   }
 }

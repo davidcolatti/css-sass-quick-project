@@ -7,13 +7,17 @@ const App = () => {
     <main class="container">
       <div class="outer-layer">
         <div class="inner-layer">
-          <div class="top-half">TOP HALF</div>
+          <div class="top-half"></div>
           <div class="bottom-half">
             <p>
               Stock images and videos that help spread the message to support
               social distancing.
             </p>
-            <span class="browse-tab">Browse</span>
+            <span class="browse-tab">
+              <h2>
+                <strong>Browse</strong>
+              </h2>
+            </span>
           </div>
         </div>
       </div>
