@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid red;
+  background-color: whitesmoke;
+  width: 50vw;
+  height: 100vh;
+  padding: 10%;
+
+  .outer-layer {
+    border: 1px solid red;
+    height: 100%;
+    padding: 3%;
+  }
+
+  .inner-layer {
+    height: 100%;
+    border: 1px solid red;
+
+    .top-half {
+      height: 50%;
+      border: 1px solid red;
+    }
+
+    .bottom-half {
+      height: 50%;
+      border: 1px solid red;
+    }
+  }
+}
