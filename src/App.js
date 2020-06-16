@@ -4,19 +4,23 @@ import React from "react";
 
 const App = () => {
   return (
-    <main class="container">
-      <div class="outer-layer">
-        <div class="inner-layer">
-          <div class="top-half"></div>
-          <div class="bottom-half">
-            <p>
+    <main className="container">
+      <div className="outer-layer">
+        <div className="inner-layer">
+          <div className="top-half">
+            <span className="social-tab">
+              <h1>SOCIAL DISTANCING</h1>
+            </span>
+            <div class="arrow-up"></div>
+          </div>
+          <div className="bottom-half">
+            <h2>
               Stock images and videos that help spread the message to support
               social distancing.
-            </p>
-            <span class="browse-tab">
-              <h2>
-                <strong>Browse</strong>
-              </h2>
+            </h2>
+            <span className="browse-tab">
+              <i className="icon fa fa-clone" aria-hidden="true"></i>
+              <h2 className="browse-h2">Browse</h2>
             </span>
           </div>
         </div>

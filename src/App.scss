@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
+
 .container {
-  // border: 1px solid red;
   width: 50vw;
   height: 100vh;
   padding: 10%;
+  min-width: 500px;
+  min-height: 510px;
+  // max-width: 700px;
+  // max-height: 710px;
+  // position: relative;
 
   .outer-layer {
-    // border: 1px solid red;
     height: 100%;
     padding: 3%;
   }
@@ -14,43 +19,83 @@
     background-color: white;
     box-shadow: 3px 3px 5px 6px rgb(204, 204, 204);
     height: 100%;
-    // border: 1px solid red;
 
     .top-half {
+      position: relative;
       background-image: url("https://genesisprofessionalgroup-my.sharepoint.com/personal/lcaro_genesisprofessionalgroup_com/Documents/Microsoft%20Teams%20Chat%20Files/image-2020-03-27-15-07-05-713.jpg");
       background-size: cover;
       height: 60%;
-      // border: 1px solid red;
+
+      .social-tab {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 0px 10px #23293179;
+        background-color: #fc9884;
+        width: 55%;
+        height: 15%;
+        left: -13px;
+        top: 93%;
+
+        h1 {
+          font-family: "Passion One", cursive;
+          width: 100%;
+          align-self: center;
+          text-align: center;
+          color: white;
+          font-weight: bolder;
+        }
+      }
+
+      .arrow-up {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid #f99d8b;
+        top: 91%;
+        left: 24%;
+      }
     }
 
     .bottom-half {
       position: relative;
       height: 40%;
-      // border: 1px solid red;
 
-      p {
+      h2 {
         padding: 10% 5%;
-        font-size: 1.5rem;
+        // font-size: 2vw;
         color: gray;
       }
 
       .browse-tab {
+        min-width: 151px;
         display: flex;
         position: absolute;
+        align-items: center;
         margin-right: -11px;
         border: 1px solid rgb(3, 151, 127);
         background-color: rgb(3, 151, 127);
-        box-shadow: -3px 0px 10px 0px rgb(204, 204, 204);
+        box-shadow: 0px 0px 10px #23293179;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        width: 35%;
-        height: 17%;
-        bottom: 55px;
+        width: 15vw;
+        height: 16%;
+        bottom: 20%;
         right: 10px;
+        // font-size: 2.3vh;
         color: white;
 
-        h2 {
-          align-self: center;
+        .icon {
+          padding: 0 15px;
+        }
+
+        .browse-h2 {
+          border-left: 2px solid white;
+          padding: 0 15px;
+          color: white;
+          font-weight: bolder;
         }
       }
     }
