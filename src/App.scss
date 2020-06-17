@@ -3,21 +3,14 @@
 .container {
   width: 50vw;
   height: 100vh;
-  padding: 10%;
-  min-width: 500px;
-  min-height: 510px;
-  // max-width: 700px;
-  // max-height: 710px;
-  // position: relative;
-
-  .outer-layer {
-    height: 100%;
-    padding: 3%;
-  }
+  margin: 10px auto;
+  position: relative;
+  max-width: 600px;
+  max-height: 700px;
 
   .inner-layer {
     background-color: white;
-    box-shadow: 3px 3px 5px 6px rgb(204, 204, 204);
+    box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.08);
     height: 100%;
 
     .top-half {
@@ -37,25 +30,23 @@
         left: -13px;
         top: 93%;
 
+        &::before {
+          position: absolute;
+          top: -27%;
+          content: "▲";
+          transform: scale(2, 1);
+          color: #fc9884;
+        }
+
         h1 {
           font-family: "Passion One", cursive;
           width: 100%;
+          font-size: 35px;
           align-self: center;
           text-align: center;
           color: white;
           font-weight: bolder;
         }
-      }
-
-      .arrow-up {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid #f99d8b;
-        top: 91%;
-        left: 24%;
       }
     }
 
@@ -63,9 +54,9 @@
       position: relative;
       height: 40%;
 
-      h2 {
+      .content {
         padding: 10% 5%;
-        // font-size: 2vw;
+        font-size: 23px;
         color: gray;
       }
 
@@ -80,11 +71,11 @@
         box-shadow: 0px 0px 10px #23293179;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-        width: 15vw;
+        width: 35%;
         height: 16%;
         bottom: 20%;
         right: 10px;
-        // font-size: 2.3vh;
+        font-size: 20px;
         color: white;
 
         .icon {
@@ -97,6 +88,42 @@
           color: white;
           font-weight: bolder;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    min-width: 400px;
+    min-height: 450px;
+
+    .social-tab {
+      transition: 0.25s ease-in-out;
+      left: 0 !important;
+      width: 100% !important;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .content {
+      font-size: 20px !important;
+    }
+
+    .browse-tab {
+      margin-right: 0 !important;
+      min-width: 0 !important;
+      transition: 0.25s ease-in-out;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      bottom: 10% !important;
+      cursor: pointer;
+
+      .browse-h2 {
+        display: none;
       }
     }
   }
