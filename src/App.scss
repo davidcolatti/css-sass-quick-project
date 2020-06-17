@@ -1,130 +1,135 @@
 @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
 
-.container {
-  width: 50vw;
-  height: 100vh;
-  margin: 10px auto;
-  position: relative;
-  max-width: 600px;
-  max-height: 700px;
+.post {
+  &-container {
+    width: 50vw;
+    height: 100vh;
+    margin: 10px auto;
+    position: relative;
+    max-width: 600px;
+    max-height: 700px;
+  }
 
-  .inner-layer {
+  &-inner-layer {
     background-color: white;
     box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.08);
     height: 100%;
+  }
 
-    .top-half {
-      position: relative;
-      background-image: url("https://genesisprofessionalgroup-my.sharepoint.com/personal/lcaro_genesisprofessionalgroup_com/Documents/Microsoft%20Teams%20Chat%20Files/image-2020-03-27-15-07-05-713.jpg");
-      background-size: cover;
-      height: 60%;
+  &-top-half {
+    position: relative;
+    background-image: url("https://genesisprofessionalgroup-my.sharepoint.com/personal/lcaro_genesisprofessionalgroup_com/Documents/Microsoft%20Teams%20Chat%20Files/image-2020-03-27-15-07-05-713.jpg");
+    background-size: cover;
+    height: 60%;
+  }
 
-      .social-tab {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0px 0px 10px #23293179;
-        background-color: #fc9884;
-        width: 55%;
-        height: 15%;
-        left: -13px;
-        top: 93%;
+  &-social-tab {
+    transition: 0.25s ease-in-out;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 10px #23293179;
+    background-color: #fc9884;
+    width: 55%;
+    height: 15%;
+    left: -13px;
+    top: 93%;
 
-        &::before {
-          position: absolute;
-          top: -27%;
-          content: "▲";
-          transform: scale(2, 1);
-          color: #fc9884;
-        }
-
-        h1 {
-          font-family: "Passion One", cursive;
-          width: 100%;
-          font-size: 35px;
-          align-self: center;
-          text-align: center;
-          color: white;
-          font-weight: bolder;
-        }
-      }
+    &::before {
+      position: absolute;
+      top: -27%;
+      content: "▲";
+      transform: scale(2, 1);
+      color: #fc9884;
     }
 
-    .bottom-half {
-      position: relative;
-      height: 40%;
-
-      .content {
-        padding: 10% 5%;
-        font-size: 23px;
-        color: gray;
-      }
-
-      .browse-tab {
-        min-width: 151px;
-        display: flex;
-        position: absolute;
-        align-items: center;
-        margin-right: -11px;
-        border: 1px solid rgb(3, 151, 127);
-        background-color: rgb(3, 151, 127);
-        box-shadow: 0px 0px 10px #23293179;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        width: 35%;
-        height: 16%;
-        bottom: 20%;
-        right: 10px;
-        font-size: 20px;
-        color: white;
-
-        .icon {
-          padding: 0 15px;
-        }
-
-        .browse-h2 {
-          border-left: 2px solid white;
-          padding: 0 15px;
-          color: white;
-          font-weight: bolder;
-        }
-      }
+    h1 {
+      font-family: "Passion One", cursive;
+      width: 100%;
+      font-size: 35px;
+      align-self: center;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
     }
+  }
+
+  &-bottom-half {
+    position: relative;
+    height: 40%;
+  }
+
+  &-content {
+    padding: 10% 5%;
+    font-size: 23px;
+    color: gray;
+  }
+
+  &-browse-tab {
+    transition: all 0.25s ease-in-out;
+    min-width: 151px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-right: -11px;
+    border: 1px solid rgb(3, 151, 127);
+    background-color: rgb(3, 151, 127);
+    box-shadow: 0px 0px 10px #23293179;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 35%;
+    height: 16%;
+    bottom: 20%;
+    right: 10px;
+    font-size: 20px;
+    color: white;
+    overflow: hidden;
+  }
+
+  &-icon {
+    padding: 0 15px;
+  }
+
+  &-browse-h2 {
+    border-left: 2px solid white;
+    padding: 0 15px;
+    color: white;
+    font-weight: bolder;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .container {
-    min-width: 400px;
-    min-height: 450px;
+  .post {
+    &-container {
+      min-width: 400px;
+      min-height: 450px;
+    }
 
-    .social-tab {
-      transition: 0.25s ease-in-out;
-      left: 0 !important;
-      width: 100% !important;
+    &-social-tab {
+      left: 0;
+      width: 100%;
 
       &::before {
         display: none;
       }
     }
 
-    .content {
-      font-size: 20px !important;
+    &-content {
+      font-size: 20px;
     }
 
-    .browse-tab {
-      margin-right: 0 !important;
-      min-width: 0 !important;
-      transition: 0.25s ease-in-out;
-      width: 50px !important;
-      height: 50px !important;
-      border-radius: 50% !important;
-      bottom: 10% !important;
+    &-browse-tab {
+      margin-right: 0;
+      min-width: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      bottom: 10%;
       cursor: pointer;
+    }
 
-      .browse-h2 {
-        display: none;
-      }
+    &-browse-h2 {
+      display: none;
     }
   }
 }
